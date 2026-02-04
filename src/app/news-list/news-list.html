@@ -1,0 +1,24 @@
+<section class="news-list" aria-labelledby="news-list-title">
+  <header class="news-list__header">
+    <h1 id="news-list-title" class="news-list__title">
+      <span class="news-list__title--primary">ÚLTIMAS</span><br>
+      <span class="news-list__title--secondary">NOTICIAS</span>
+    </h1>
+  </header>
+  <div class="news-list__grid" role="list">
+    <app-news-card
+      *ngFor="let item of news"
+      [news]="item"
+      role="listitem"
+    ></app-news-card>
+  </div>
+  <div class="news-list__actions">
+    <button
+      class="news-list__button"
+      type="button"
+      aria-label="Ver más noticias"
+    >
+      Ver más noticias
+    </button>
+  </div>
+</section>

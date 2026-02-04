@@ -1,0 +1,27 @@
+<article class="news-card" tabindex="0" aria-label="{{ news.title }}">
+  <figure class="news-card__image-wrapper">
+    <img
+      [src]="news.image"
+      [alt]="news.title"
+      class="news-card__image"
+      loading="lazy"
+      width="140"
+      height="100"
+    />
+  </figure>
+  <div class="news-card__content">
+    <time class="news-card__date" [attr.datetime]="news.date">
+      {{ news.date }}
+    </time>
+    <h2 class="news-card__title">{{ news.title }}</h2>
+    <div class="news-card__tags">
+      <span
+        *ngFor="let tag of news.tags"
+        class="news-card__tag"
+        aria-label="Etiqueta: {{ tag }}"
+      >
+        {{ tag }}
+      </span>
+    </div>
+  </div>
+</article>
