@@ -1,12 +1,5 @@
-$primary-color: #25327a;
-$secondary-color: #fff;
-$button-bg: #c44e00;
-$button-text: #fff;
-$card-bg: #fff;
-$card-radius: 12px;
-$tag-bg: #f4f7ff;
-$tag-color: #25327a;
-$font-family: 'Montserrat', Arial, sans-serif;
+@use 'variables' as *;
+
 
 .news-list {
   background: linear-gradient(135deg, #e8f0fa 0%, #d7e4f3 100%);
@@ -73,7 +66,7 @@ $font-family: 'Montserrat', Arial, sans-serif;
 
     &:hover,
     &:focus {
-      background: darken($button-bg, 10%);
+      background: $button-bg, 10%;
       outline: none;
     }
   }

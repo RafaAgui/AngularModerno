@@ -1,9 +1,4 @@
-$primary-color: #25327a;
-$card-bg: #fff;
-$card-radius: 16px;
-$tag-bg: #f4f7ff;
-$tag-color: #25327a;
-$font-family: 'Montserrat', Arial, sans-serif;
+@use 'variables' as *;
 
 .news-card {
   display: flex;
