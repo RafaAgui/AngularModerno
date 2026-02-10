@@ -25,16 +25,16 @@ export class HeroPage {
   }
 
   changeHero() {
-    this.name = () => 'Captain America';
+    this.nameSignal.set('Captain America');
   }
 
   changeAge() {
-    this.age = () => 40;
+    this.ageSignal.set(40);
   }
 
   resetForm() {
-    this.name = () => 'Rafael Aguilar';
-    this.age = () => 54;
+    this.nameSignal.set('Rafael Aguilar');
+    this.ageSignal.set(54);
   }
 
 
