@@ -1,0 +1,7 @@
+<h1>Añadir heroe</h1>
+<div class="add-hero">
+  <app-form-hero (newHero)="herosService.addHero($event)"/>
+</div>
+<div>
+  <app-list-hero [heroes]="herosService.heroes()" />
+</div>

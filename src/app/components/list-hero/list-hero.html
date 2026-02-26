@@ -1,0 +1,5 @@
+  <ul>
+    @for (hero of heroes; track hero.id) {
+      <li><strong>{{ hero.name }}</strong>  ({{ hero.alterEgo }}) - <span [class.child-age]="hero.age < 18">{{ hero.age }} años</span></li>
+    }
+  </ul>

@@ -1,0 +1,15 @@
+  <form >
+    <div class="add-hero__group">
+      <label for="name" class="add-hero__label">Nombre del héroe</label>
+      <input type="text" class="add-hero__input" name="name" required id="name" [(ngModel)]="nameHeroSignal" >
+    </div>
+    <div class="add-hero__group">
+      <label for="alterEgo" class="add-hero__label">Poder del héroe</label>
+      <input type="text" class="add-hero__input" id="alterEgo" name="alterEgo" required [(ngModel)]="alterEgoHeroSignal">
+    </div>
+    <div class="add-hero__group">
+      <label for="age" class="add-hero__label">Edad del héroe</label>
+      <input type="number" class="add-hero__input" id="age" name="age" required [(ngModel)]="ageHeroSignal">
+    </div>
+    <button type="submit" class="add-hero__button" (click)="addHero()">Añadir héroe</button>
+  </form>

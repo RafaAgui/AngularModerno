@@ -11,9 +11,14 @@ export class HeroPage {
   uppercase = new UpperCasePipe();
 
   nameSignal = signal('Iron Man');
+  alteregoSignal = signal('Tony Stark');
   ageSignal = signal(45);
   name() {
     return this.nameSignal();
+  }
+
+  alterego() {
+    return this.alteregoSignal();
   }
 
   age() {
@@ -21,11 +26,12 @@ export class HeroPage {
   }
 
   getHeroDescription() {
-    return `${this.name()} is ${this.age()} years old.`;
+    return `${this.name()} (${this.alterego()}) is ${this.age()} years old.`;
   }
 
   changeHero() {
     this.nameSignal.set('Captain America');
+    this.alteregoSignal.set('Steve Rogers');
   }
 
   changeAge() {
@@ -33,7 +39,8 @@ export class HeroPage {
   }
 
   resetForm() {
-    this.nameSignal.set('Rafael Aguilar');
+    this.nameSignal.set('Leafar');
+    this.alteregoSignal.set('Rafael Aguilar');
     this.ageSignal.set(54);
   }
 
