@@ -1,0 +1,40 @@
+@use 'variables' as *;
+
+.navbar {
+  padding: 1rem;
+  &__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    row-gap: 1rem;
+  }
+  &__item {
+    padding: .5rem;
+  }
+  &__link {
+      background: $button-bg;
+      color: $button-text;
+      font-family: $font-family;
+      font-size: 1.25rem;
+      font-weight: 500;
+      border: none;
+      border-radius: 2rem;
+      padding: 1rem 2.5rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      box-shadow: 0 2px 8px rgba(196, 78, 0, 0.08);
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        background:$button-bg-hover;
+        outline: none;
+        color: $white;
+      }
+    }
+    &.active {
+      background: $button-bg-hover;
+      color: $white;
+    }
+}

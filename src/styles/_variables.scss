@@ -1,13 +1,18 @@
 //colors
 
 $primary-color: #25327a;
-$secondary-color: #fff;
+$white: #fff;
+$black: #000;
 $button-bg: #c44e00;
 $tag-bg: #f4f7ff;
-$tag-color: #25327a;
+$text-color: #333;
+$secondary-color: #d7e4f3;
 
+$tag-color: $primary-color;
 $button-text: $secondary-color;
 $card-bg: $secondary-color;
+
+$button-bg-hover: lighten($button-bg, 10%);
 
 
 //fonts
