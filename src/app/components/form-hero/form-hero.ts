@@ -19,7 +19,7 @@ export class FormHero {
 
   addHero() {
     const newHero: Hero = {
-      id: this.heroes().length + 1,
+      id: Math.floor(Math.random() * 1000),
       name: this.nameHeroSignal(),
       alterEgo: this.alterEgoHeroSignal(),
       age: this.ageHeroSignal()
