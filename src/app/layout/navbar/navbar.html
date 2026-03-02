@@ -1,0 +1,15 @@
+<nav class="navbar">
+  <ul class="navbar__list">
+    @for (item of menuOptions; track item.id) {
+      <li class="navbar__item">
+        <a class="navbar__link" [routerLink]="item.url" routerLinkActive="active">
+          <img class="navbar__icon" src="{{ item.icon }}" alt="{{ item.name }}">
+          <span class="navbar__name">{{ item.name }}</span>
+          @if (item.subname) {
+            <span class="navbar__subname">{{ item.subname }}</span>
+          }
+        </a>
+      </li>
+    }
+  </ul>
+</nav>
