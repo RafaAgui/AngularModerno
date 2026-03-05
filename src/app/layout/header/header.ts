@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Navbar } from "../navbar/navbar";
+import { environment } from '@environments/environment';
 
 @Component({
   selector: 'app-header',
@@ -8,5 +9,5 @@ import { Navbar } from "../navbar/navbar";
   styleUrl: './header.scss'
 })
 export class Header {
-
+  envs = environment;
 }
