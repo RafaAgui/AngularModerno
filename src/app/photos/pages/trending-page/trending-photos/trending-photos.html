@@ -1,7 +1,19 @@
-<article>
+<article class="trending">
   <h2>Trending Photos</h2>
   <p>Here are some of the most popular photos right now.</p>
   <section>
-    <app-photo-card></app-photo-card>
+    <ul class="trending__list">
+      @if (photosResource.isLoading()) {
+        <p>Cargando fotos...</p>
+      } @else if (photosResource.error()) {
+        <p>Hubo un error al cargar las fotos.</p>
+      } @else {
+        @for (photo of photosResource.value(); track photo.id) {
+          <app-photo-card [idPhoto]="photo.id" [imageUrl]="photo.urls.small" [altPhoto]="photo.alt_description" class="trending__card"></app-photo-card>
+        } @empty {
+        <p>No se encontraron fotos.</p>
+        }
+      }
+     </ul>
   </section>
 </article>

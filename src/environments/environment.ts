@@ -5,7 +5,7 @@ export const environment = {
   apiUrl: 'https://api.unsplash.com',
   aplication: '886710',
   accessKey: 'r5kcOFNBcqT50qLc-cY1LzncZRAbniycMyD2Ork_PzQ',
-  Secretkey: 'ubjIMnAPwity-yIeLwnCOZUS57bbVJLQJqmga_VPvLQ',
+  secretkey: 'ubjIMnAPwity-yIeLwnCOZUS57bbVJLQJqmga_VPvLQ',
   // Additional company information
   companyName: 'Rafael Aguilar',
   companyEmail: 'rafael.aguilar@company.com',

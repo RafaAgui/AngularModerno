@@ -1,13 +1,15 @@
-import { Component, Input } from '@angular/core';
-import { PHOTOS_OPTIONS } from '../../../../services/photos.service';
+import { Component, input } from '@angular/core';
+import { RouterLink, RouterLinkActive } from "@angular/router";
 
 
 @Component({
   selector: 'app-photo-card',
-  imports: [],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './photo-card.html',
   styleUrl: './photo-card.scss'
 })
 export class PhotoCard {
-  photoOptions = PHOTOS_OPTIONS;
+  imageUrl = input.required<string>();
+  altPhoto = input.required<string>();
+  idPhoto = input.required<string>();
 }

@@ -11,10 +11,15 @@ export const routes: Routes = [
     loadComponent: () => import('./photos/pages/search-page/search-page')
   },
   {
-    path: 'trending',
+    path: 'photo',
     loadComponent: () => import('./photos/pages/trending-page/trending-page')
   },
-    {
+  {
+  path: 'photo/:id',
+  loadComponent: () => import('./photos/pages/trending-page/photo-detail/photo-detail')
+
+  },
+  {
     path: '**',
     redirectTo: ''
   }

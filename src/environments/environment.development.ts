@@ -1,7 +1,8 @@
 export const environment = {
   production: false,
   apiUrl: 'https://api.unsplash.com',
-  accessKey: 'Zt9sXo2n8l3j1a7m9v5b0c6d4e8f2g1h3i4j5k6l7m8n9o0p1q2r3s4t5u6v7w8x9y0z',
+  accessKey: 'r5kcOFNBcqT50qLc-cY1LzncZRAbniycMyD2Ork_PzQ',
+  secretkey: 'ubjIMnAPwity-yIeLwnCOZUS57bbVJLQJqmga_VPvLQ',
 
     // Additional company information
   companyName: 'Rafael Aguilar',

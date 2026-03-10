@@ -1,5 +1,7 @@
-    <ul class="photo-card">
-    @for (photo of photoOptions; track photo.id) {
-      <li class="photo-card__item"><img class="photo-card__img" src={{photo.url}} alt="{{photo.alt_description}}"></li>
-    }
-    </ul>
+<li class="photo-card__item">
+  <a class="photo-card__link" [routerLink]="['/photo', idPhoto()]" routerLinkActive="active">
+    <img class="photo-card__img" [src]='imageUrl()'  [alt]='altPhoto()'>
+  </a>
+</li>
+
+

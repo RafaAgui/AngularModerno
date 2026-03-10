@@ -1,0 +1,15 @@
+@if (getPhoto().loading) {
+  <p>Cargando...</p>
+}
+
+@if (getPhoto().error) {
+  <p>Error</p>
+}
+
+@if (getPhoto().photo) {
+  <h2>{{ getPhoto().author }}</h2>
+  <img [src]="getPhoto().photo?.urls?.regular">
+  <p>{{ getPhoto().description }}</p>
+  <a [href]="getPhoto().photo?.urls?.full">Resolución completa</a>
+
+}
