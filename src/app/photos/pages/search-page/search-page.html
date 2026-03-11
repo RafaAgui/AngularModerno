@@ -1,0 +1,35 @@
+<article class="search">
+  <h2 class="search__title">Search Photos</h2>
+  <p class="search__text">Search some photos.</p>
+  <section class="search__xxx">
+    <input
+      class="search__input"
+      type="text"
+      placeholder="Search photos..."
+      #txtSearch
+      [value]="lastQuery()"
+      (keyup.enter)="onSearch(txtSearch.value)"
+      />
+  </section>
+  <ul class="search__list">
+      @for (photo of photos(); track photo.id) {
+        <app-photo-card [idPhoto]="photo.id" [imageUrl]="photo.urls.small" [altPhoto]="photo.user.name" class="search__card"></app-photo-card>
+      } @empty {
+      <p>No se encontraron fotos.</p>
+      }
+    </ul>
+
+    @if (searchHistory().length > 0) {
+  <div class="search__history">
+
+    <p>Últimas búsquedas:</p>
+
+    @for (item of searchHistory(); track item) {
+      <button (click)="onSearch(item)">
+        {{ item }}
+      </button>
+    }
+
+  </div>
+}
+</article>

@@ -1,0 +1,15 @@
+<section class="trending">
+  <ul class="trending__list">
+    @if (photosResource.isLoading()) {
+      <p>Cargando fotos...</p>
+    } @else if (photosResource.error()) {
+      <p>Hubo un error al cargar las fotos.</p>
+    } @else {
+      @for (photo of photosResource.value(); track photo.id) {
+        <app-photo-card [idPhoto]="photo.id" [imageUrl]="photo.urls.small" [altPhoto]="photo.alt_description" class="trending__card"></app-photo-card>
+      } @empty {
+      <p>No se encontraron fotos.</p>
+      }
+    }
+    </ul>
+</section>

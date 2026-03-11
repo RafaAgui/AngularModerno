@@ -1,0 +1,13 @@
+.trending{
+  &__list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    column-count: 3; /* Número de columnas */
+    gap: 1rem; /* Espacio entre columnas */
+  }
+  &__card{
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
