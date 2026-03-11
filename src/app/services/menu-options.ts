@@ -1,11 +1,11 @@
-import { Menu } from '../photos/interfaces/menu.interface';
+import { Menu } from '../interfaces/menu.interface';
 
 export const MENU_OPTIONS: Menu[] = [
   {
     id: 1,
-    name: 'Dashboard',
+    name: 'Photos',
     subname: 'Home',
-    url: '/dashboard',
+    url: '/photos',
     icon: '/house.svg'
   },
   {

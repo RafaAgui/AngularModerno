@@ -1,3 +1,15 @@
-<section>
-  <app-trending-photos></app-trending-photos>
-</section>
+
+<ul class="trending__list">
+
+  @for (photo of filteredPhotos(); track photo.id) {
+    <app-photo-card
+      [imageUrl]="photo.urls.small"
+      [altPhoto]="photo.user.name"
+      [idPhoto]="photo.id">
+
+    </app-photo-card>
+
+  } @empty {
+    <p>No photos found.</p>
+  }
+</ul>

@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    loadComponent: () => import('./photos/pages/dashboard-page/dashboard-page')
+    loadComponent: () => import('./photos/pages/photos-page/photos-page')
   },
 
   {
@@ -16,7 +16,7 @@ export const routes: Routes = [
   },
   {
   path: 'photo/:id',
-  loadComponent: () => import('./photos/pages/trending-page/photo-detail/photo-detail')
+  loadComponent: () => import('./photos/components/photo-detail/photo-detail')
 
   },
   {

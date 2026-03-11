@@ -1,7 +1,7 @@
 import { Component, inject, signal, effect } from '@angular/core';
-import { SunsplashService } from "../../../services/sunsplash.services";
+import { SunsplashService } from "../../services/sunsplash.services";
 import { UnsplashSearch } from '../../interfaces/unsplash.interfaces';
-import { PhotoCard } from '../trending-page/photo-card/photo-card';
+import { PhotoCard } from '../../components/photo-card/photo-card';
 
 @Component({
   selector: 'app-search-page',

@@ -1,6 +1,6 @@
 import { Component, input, inject, computed } from '@angular/core';
 import { rxResource } from '@angular/core/rxjs-interop';
-import { SunsplashService } from '../../../../services/sunsplash.services';
+import { SunsplashService } from '../../services/sunsplash.services';
 
 @Component({
   standalone: true,
@@ -10,7 +10,7 @@ import { SunsplashService } from '../../../../services/sunsplash.services';
 })
 export default class PhotoDetail {
 
-  id = input.required<string>();
+  idPhoto = input.required<string>();
 
   getPhoto = computed(() => ({
     photo: this.photoResource.value(),
@@ -25,7 +25,7 @@ export default class PhotoDetail {
   private sunsplashService = inject(SunsplashService);
 
   photoResource = rxResource({
-    params: () => this.id(),
+    params: () => this.idPhoto(),
     stream: ({ params }) => this.sunsplashService.getPhotoById(params)
   });
 

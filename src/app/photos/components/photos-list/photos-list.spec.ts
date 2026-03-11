@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TrendingPhotos } from './trending-photos';
+import { TrendingPhotos } from './photos-list';
 
 describe('TrendingPhotos', () => {
   let component: TrendingPhotos;

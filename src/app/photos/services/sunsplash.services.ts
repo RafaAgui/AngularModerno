@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom, map } from 'rxjs';
-import { UnsplashPhoto, UnsplashSearch } from '../photos/interfaces/unsplash.interfaces';
+import { UnsplashPhoto, UnsplashSearch } from '../../photos/interfaces/unsplash.interfaces';
 import { environment } from '@environments/environment.development';
 
 
