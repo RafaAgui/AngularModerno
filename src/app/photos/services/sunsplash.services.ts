@@ -36,4 +36,14 @@ export class SunsplashService {
       `${this.API_URL}/${id}?client_id=${this.ACCESS_KEY}`
     );
   }
+
+    getTrending() {
+    return this.http
+      .get<UnsplashPhoto[]>(`${this.API_URL}`, {
+        params: {
+          client_id: this.ACCESS_KEY,
+          per_page: 20
+        }
+      });
+  }
 }

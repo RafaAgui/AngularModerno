@@ -15,7 +15,7 @@ export const routes: Routes = [
     loadComponent: () => import('./photos/pages/trending-page/trending-page')
   },
   {
-  path: 'photo/:id',
+  path: 'photo/:idPhoto',
   loadComponent: () => import('./photos/components/photo-detail/photo-detail')
 
   },

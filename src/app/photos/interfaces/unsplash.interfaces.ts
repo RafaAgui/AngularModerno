@@ -4,6 +4,7 @@ export interface UnsplashPhoto {
   height: number,
   color: string,
   alt_description: string,
+  likes: number,
   urls: {
     raw:string ,
     full: string,
@@ -15,8 +16,7 @@ export interface UnsplashPhoto {
       name: string,
       portfolio_url: string,
       bio: string
-  },
-  likes: number,
+  }
 }
 
 export interface UnsplashSearch {

@@ -1,4 +1,4 @@
-import { Component, input, inject, computed } from '@angular/core';
+import { Component, input, inject, computed, effect } from '@angular/core';
 import { rxResource } from '@angular/core/rxjs-interop';
 import { SunsplashService } from '../../services/sunsplash.services';
 
@@ -28,5 +28,11 @@ export default class PhotoDetail {
     params: () => this.idPhoto(),
     stream: ({ params }) => this.sunsplashService.getPhotoById(params)
   });
+
+   constructor() {
+    effect(() => {
+      console.log('Photo ID:', this.idPhoto());
+    });
+  }
 
 }

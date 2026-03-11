@@ -1,18 +1,25 @@
-import { Component, signal, computed} from '@angular/core';
-import { UnsplashPhoto } from '../../interfaces/unsplash.interfaces';
+import { Component, computed, inject } from '@angular/core';
+import { rxResource } from '@angular/core/rxjs-interop';
+import { SunsplashService } from '../../services/sunsplash.services';
 import { PhotoCard } from '../../components/photo-card/photo-card';
+
 @Component({
   standalone: true,
   selector: 'app-trending-page',
-  imports: [ PhotoCard],
+  imports: [PhotoCard],
   templateUrl: './trending-page.html',
   styleUrl: './trending-page.scss'
 })
 export default class TrendingPage {
 
-photos = signal<UnsplashPhoto[]>([]);
+  private sunsplashService = inject(SunsplashService);
 
-filteredPhotos = computed(() =>
-  this.photos().filter(photo => photo.likes >= 1)
-);
+  trendingResource = rxResource({
+    stream: () => this.sunsplashService.getTrending()
+  });
+
+  filteredPhotos = computed(() =>
+    (this.trendingResource.value() ?? []).filter(photo => photo.likes >= 25)
+  );
+
 }

@@ -12,4 +12,5 @@ export class PhotoCard {
   imageUrl = input.required<string>();
   altPhoto = input.required<string>();
   idPhoto = input.required<string>();
+  likes = input<number>();
 }

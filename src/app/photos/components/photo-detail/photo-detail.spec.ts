@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { PhotoDetail } from './photo-detail';
 
 describe('PhotoDetail', () => {
