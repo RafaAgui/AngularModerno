@@ -1,15 +1,18 @@
+<section class="trending">
+  <h2 class="trending__title">Trending Photos</h2>
+  <p class="trending__text">The most trending photos.</p>
+  <ul class="trending__list">
 
-<ul class="trending__list">
+    @for (photo of filteredPhotos(); track photo.id) {
+      <app-photo-card
+        [imageUrl]="photo.urls.small"
+        [altPhoto]="photo.user.name"
+        [idPhoto]="photo.id">
 
-  @for (photo of filteredPhotos(); track photo.id) {
-    <app-photo-card
-      [imageUrl]="photo.urls.small"
-      [altPhoto]="photo.user.name"
-      [idPhoto]="photo.id">
-
-    </app-photo-card>
-    <p>❤️ {{photo.likes}}</p>
-  } @empty {
-    <p>No photos found.</p>
-  }
-</ul>
+      </app-photo-card>
+      <p>❤️ {{photo.likes}}</p>
+    } @empty {
+      <p>No photos found.</p>
+    }
+  </ul>
+</section>

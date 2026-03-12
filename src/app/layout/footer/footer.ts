@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './footer.scss'
 })
 export class Footer {
-  footerTitle = 'By Rafael Aguilar'
+  footerTitle = 'Created in Angular 20'
 }
