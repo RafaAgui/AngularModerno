@@ -1,0 +1,23 @@
+<section class="login">
+  <h2>Login</h2>
+    @if (reason === 'auth-required') {
+      <p class="login__warning">
+        Debes iniciar sesión para acceder a esta página
+      </p>
+    }
+  <input
+    #txtUser
+    type="text"
+    placeholder="Username"
+    class="login__input"
+  />
+  <input
+    #txtPass
+    type="password"
+    placeholder="Password"
+    class="login__input"
+  />
+  <button (click)="login(txtUser.value, txtPass.value)" class="login__button">
+    Login
+  </button>
+</section>

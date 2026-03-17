@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject, computed } from '@angular/core';
 import { RouterLink, RouterLinkActive } from "@angular/router";
-import { MENU_OPTIONS } from '../../services/menu-options';
+import { MENU_OPTIONS } from '../services/menu-options';
+import { AuthService } from '../../auth/services/users.services'
+
 
 @Component({
   selector: 'app-navbar',
@@ -10,4 +12,12 @@ import { MENU_OPTIONS } from '../../services/menu-options';
 })
 export class Navbar {
   menuOptions = MENU_OPTIONS;
+
+  private authService = inject(AuthService);
+
+  userName = computed(() => this.authService.user()?.name);
+
+  logout() {
+    this.authService.logout();
+  }
 }

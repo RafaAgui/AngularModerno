@@ -8,5 +8,16 @@
         </a>
       </li>
     }
+    @if (userName()) {
+    <li class="navbar__item">
+        <button (click)="logout()" class="navbar__link">
+          <img class="navbar__icon" src="/user-xmark.svg" alt="icon">
+          <span class="navbar__name">Hola {{ userName() }}</span>
+        </button>
+    </li>
+    }
   </ul>
+
+
+
 </nav>
