@@ -30,6 +30,15 @@
         <span class="navbar__name">Login</span>
       </a>
     </li>
+    <li class="navbar__item">
+      <button (click)="toggle()" class="theme-toggle" aria-label="Cambiar tema">
+        @if (currentTheme() === 'light') {
+          <img src="moon.svg" alt="Modo Oscuro">
+        } @else {
+          <img src="sun.svg" alt="Modo Claro">
+        }
+      </button>
+    </li>
   }
   </ul>
 

@@ -23,31 +23,54 @@
     flex-direction: column;
     align-items: center;
     gap: 0.25rem;
-    background-color: #333;
+    background-color: var(--text-color);
   }
   &__link{
     display: flex;
     align-items: center;
     gap: 0.25rem;
     text-decoration: none;
-    color: #ddd;
+    color: #999;
     font-size: 0.875rem;
     padding: 0.5rem 1rem;
     border-radius: 1rem;
     &.active{
-      color: #fff;
+      color: var(--bg-color);
     }
     &:hover{
-      color: #fff;
+      color: var(--bg-color);
       text-decoration: underline;
     }
   }
   &__icon{
     width: 24px;
     height: 24px;
-    filter: invert(100%) ;
   }
   &__name{
     white-space: nowrap;
+  }
+}
+
+
+.theme-toggle {
+  border: 1px solid var(--accent-color);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s active;
+
+  &:hover {
+    background-color: rgba(var(--accent-color), 0.1);
+  }
+
+  img {
+    width: 24px;
+    height: 24px;
+
+    & [data-theme='dark']{
+      filter:invert(100%)
+    }
   }
 }

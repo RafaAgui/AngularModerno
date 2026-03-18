@@ -1,9 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+  --light: #ffffff;
+  --dark: #333;
+  --accent-color: #79B3AD;
+
+  --bg-color: var(--light);
+  --text-color: var(--dark);
+  img[src$='.svg'] {
+    filter: invert(1);
+  }
+}
+
+[data-theme='dark'] {
+  --bg-color: var(--dark);
+  --text-color: var(--light);
+
+  img[src$='.svg'] {
+    filter: invert(0);
+  }
+}
+
 body {
   font-family: 'Nunito', sans-serif;
   max-width: 1920px;
   margin: 0 auto;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 main {
   padding: 1rem;
