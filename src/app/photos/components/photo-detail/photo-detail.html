@@ -8,7 +8,7 @@
 
 @if (getPhoto().photo) {
   <h2>{{ getPhoto().author }}</h2>
-  <img [src]="getPhoto().photo?.urls?.regular">
+  <img [src]="getPhoto().photo?.urls?.regular" loading="lazy">
   <p>{{ getPhoto().description }}</p>
   <a [href]="getPhoto().photo?.urls?.full">Resolución completa</a>
 

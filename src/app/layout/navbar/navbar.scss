@@ -1,10 +1,22 @@
 .navbar{
+  & button{
+    background: transparent;
+    cursor: pointer;
+    border:none;
+  }
   &__list{
     display: flex;
     gap: 1rem;
     list-style: none;
     padding: 0;
     margin: 0;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media(min-width: 768px){
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+    }
   }
   &__item{
     display: flex;
@@ -34,5 +46,8 @@
     width: 24px;
     height: 24px;
     filter: invert(100%) ;
+  }
+  &__name{
+    white-space: nowrap;
   }
 }

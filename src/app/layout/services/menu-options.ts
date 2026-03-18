@@ -12,7 +12,7 @@ export const MENU_OPTIONS: Menu[] = [
     id: 2,
     name: 'Trending',
     subname: 'Popular',
-    url: '/photo',
+    url: '/trending',
     icon: '/trending.svg'
   },
   {

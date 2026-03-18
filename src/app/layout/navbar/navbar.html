@@ -1,6 +1,9 @@
 <nav class="navbar">
   <ul class="navbar__list">
-    @for (item of menuOptions; track item.id) {
+
+
+@if (userName()) {
+      @for (item of menuOptions; track item.id) {
       <li class="navbar__item">
         <a class="navbar__link" [routerLink]="item.url" routerLinkActive="active">
           <img class="navbar__icon" src="{{ item.icon }}" alt="{{ item.name }}">
@@ -8,5 +11,28 @@
         </a>
       </li>
     }
+  <li class="navbar__item">
+    <button (click)="logout()" class="navbar__link">
+      <img class="navbar__icon" src="/user-xmark.svg" alt="Logout icon">
+      <span class="navbar__name">Hola {{ userName() }}</span>
+    </button>
+  </li>
+  } @else {
+    <li class="navbar__item">
+      <a class="navbar__link" routerLink="/trending" routerLinkActive="active">
+        <img class="navbar__icon" src="/trending.svg" alt="Trending">
+        <span class="navbar__name">Trending</span>
+      </a>
+    </li>
+    <li class="navbar__item">
+      <a class="navbar__link" routerLink="/login" routerLinkActive="active">
+        <img class="navbar__icon" src="/user-xmark.svg" alt="Login icon">
+        <span class="navbar__name">Login</span>
+      </a>
+    </li>
+  }
   </ul>
+
+
+
 </nav>
