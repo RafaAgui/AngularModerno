@@ -21,12 +21,5 @@ export const MENU_OPTIONS: Menu[] = [
     subname: 'Find photos',
     url: '/search',
     icon: '/search.svg'
-  },
-  {
-    id: 4,
-    name: 'Login',
-    subname: 'Login photos',
-    url: '/login',
-    icon: '/user.svg'
   }
 ];

@@ -4,6 +4,10 @@
   align-items: center;
   padding: 1rem;
   gap: 1rem;
+  flex-direction: column;
+  @media(min-width: 768px){
+    flex-direction: row;
+  }
   &__logo{
     display: flex;
     align-items: center;
@@ -17,5 +21,12 @@
     font-size: 1.5rem;
     color: #333;
     margin: 0;
+  }
+  &__subtitle{
+    display:none;
+    @media(min-width: 768px){
+      display: inline-block;
+      font-size: 1rem;
+    }
   }
 }

@@ -20,4 +20,8 @@ export class Navbar {
   logout() {
     this.authService.logout();
   }
+
+  login(u: string, p: string){
+    this.authService.login(u, p);
+  }
 }

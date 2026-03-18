@@ -18,7 +18,6 @@ export const routes: Routes = [
   },
   {
     path: 'trending',
-    canActivate: [authGuard],
     loadComponent: () => import('./photos/pages/trending-page/trending-page')
   },
   {
